@@ -10,11 +10,6 @@ const path = require("path")
 const port = process.env.PORT || 8080
 const web = express()
 
-// Functions
-function publicFiles(file){
-    return file ? path.join(__dirname, "public", file) : path.join(__dirname, "public")
-}
-
 /// Configurations
 // Express
 web.use(helmet({ contentSecurityPolicy: false }))
